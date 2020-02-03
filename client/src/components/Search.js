@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Search() {
+export default function Search(props) {
     return (
         <div>
             <form>
-                <input type="text" />
+                <input onChange={props.search} type="text" />
                 <button type="submit">Search</button>
             </form>
         </div>
