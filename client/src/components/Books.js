@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Search from './Search'
 import BookList from './BookList'
 import request from 'superagent'
+import { Container, Row, Col} from 'reactstrap';
 
 export class Books extends Component {
     constructor(props){
@@ -22,16 +23,19 @@ export class Books extends Component {
     })        
     }
     handleSearch =(e) =>{
-        console.log(e.target.value)
-        this.setState({
-            search: e.target.value
-        })
+        this.setState({ search: e.target.value })
     }
     render() {
         return (
             <div>
                 <Search searchpromise={this.searchBook} search={this.handleSearch}/>
+                <Container>
+                    <Row>
+                        <Col sm={3}>
                 <BookList books={this.state.books}/>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         )
     }

@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Search(props) {
+class Search extends Component {
+
+render(){
+
     return (
         <div>
-            <form onSubmit={props.searchpromise} action="">
-                <input onChange={props.search} type="text" />
+            <form>
+                <input type="text" placeholder="Search for Book..."/>
                 <button type="submit">Search</button>
             </form>
         </div>
     )
 }
+}
+export default Search;

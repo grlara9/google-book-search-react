@@ -1,13 +1,17 @@
 import React from 'react';
-import Header from './components/Header'
-import Books from './components/Books'
+import { Jumbotron, Button } from 'reactstrap';
+import Search from './components/Search'
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     <Header />
-     <Books />
+    <div className="App container">
+      <Jumbotron>
+        <h1 className="lead text-center">Google Search Book App</h1>
+          <Search />
+        </Jumbotron>
+     
     </div>
   );
 }
