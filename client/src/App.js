@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App container">
       <Jumbotron>
-        <h1 className="lead text-center">Google Search Book App</h1>
+        <h1 className="lead text-center font-weight-bold mb-3">Google Search Book App</h1>
           <Search />
         </Jumbotron>
      

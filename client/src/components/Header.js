@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Search from './Search'
 import BookList from './BookList'
 import request from 'superagent'
-import { Jumbotron, Button } from 'reactstrap';
+
 
 export class Header extends Component {
     constructor(props){
