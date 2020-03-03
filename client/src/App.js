@@ -21,10 +21,16 @@ class App extends Component {
     .then((data) =>{
       console.log(data)
     })
+    .then((promise) => {
+      this.setState({ books: [...promise.data.items ]})
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   }
 
   handleSearch = (e) => {
-    console.log(e.target.value)
+   
     this.setState({ searchField: e.target.value})
   }
   render() {
