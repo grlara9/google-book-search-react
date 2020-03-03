@@ -6,7 +6,7 @@ const Search =(props) =>  {
 
     return (
         <div>
-            <form>
+            <form onSubmit={props.book}>
                 <div className="row">
 
                 <div className="form-group col-md-8">
