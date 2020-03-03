@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 
-class Search extends Component {
+const Search =(props) =>  {
 
-    
-render(){
+
 
     return (
         <div>
             <form>
-                <div class="row">
+                <div className="row">
 
                 <div className="form-group col-md-8">
 
-                <input type="text" className="form-control form-control-lg" placeholder="Search for Book..."/>
+                <input onChange={props.search} type="text" className="form-control form-control-lg" placeholder="Search for Book..."/>
                 </div>
                 <div className="form-group col-md-4">
 
@@ -22,6 +21,6 @@ render(){
             </form>
         </div>
     )
-}
+
 }
 export default Search;
