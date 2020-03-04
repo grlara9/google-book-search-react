@@ -1,17 +1,33 @@
 import React, { Component } from 'react'
-import Search from './Search'
 import BookList from './BookList'
-import request from 'superagent'
-import { Container, Row, Col} from 'reactstrap';
+
 
 export class Books extends Component {
     showBooks = () => {
-        const book = this.props.result
+        const book = this.props.result;
+
+        if(book.length === 0) return null;
+
+        console.log(book)
+
+        return (
+            <React.Fragment>
+                <div className="col-12 p-5 row">
+                   { book.map(b => (
+                       <BookList 
+                       
+                       />
+                   ))}
+                </div>
+            </React.Fragment>
+        )
     } 
     
     render() {
         return (
-            <p>work</p>
+            <React.Fragment>
+                { this.showBooks()}
+            </React.Fragment>
         )
     }
 }

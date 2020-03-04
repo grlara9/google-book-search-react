@@ -4,22 +4,8 @@ import BookCard from './BookCard'
 
 export default function BookList(props) {
     return(
-        
-        <div>
-            {
-                props.books.map((book, k) =>{
-                    
-                    return <BookCard 
-                    image={book.volumeInfo.imageLinks.thumbnail} 
-                    key={k}
-                    title={book.volumeInfo.title} 
-                    author={book.volumeInfo.authors} 
-                    published={book.volumeInfo.publishedDate}/>
-
-                    
-                })
-            }
-        </div>
+        <p>si se pudotryugiok;l,njbhvgfcgvhbjnkmlmiuty</p>
+      
             )
     
 }
