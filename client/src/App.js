@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 import Search from './components/Search'
 import axios from "axios"
+import Books from './components/Books'
 
 import './App.css';
 
@@ -10,7 +11,7 @@ class App extends Component {
     super(props);
     this.state ={
 
-      books:[],
+      books: [],
       searchField:''
     }
   }
@@ -20,10 +21,9 @@ class App extends Component {
     axios.get("https://www.googleapis.com/books/v1/volumes?q=" + this.state.searchField)
     .then((data) =>{
       console.log(data)
+      this.setState({ books: [...data.data.items ] })
     })
-    .then((promise) => {
-      this.setState({ books: [...promise.data.items ]})
-    })
+    
     .catch((error) => {
       console.log(error)
     })
@@ -41,6 +41,7 @@ class App extends Component {
         <h1 className="lead text-center font-weight-bold mb-3">Google Search Book App</h1>
           <Search book={this.searchBook} search={this.handleSearch}/>
         </Jumbotron>
+        <Books result={this.state.books}/>
      
     </div>
       )
