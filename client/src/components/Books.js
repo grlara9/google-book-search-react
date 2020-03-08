@@ -13,9 +13,13 @@ export class Books extends Component {
         return (
             <React.Fragment>
                 <div className="col-12 p-5 row">
-                   { book.map(b => (
+                   { 
+                    book.map((books) => (
                        <BookList 
-                       
+                            key={books.id}
+                            image={books.volumeInfo.imageLinks.thumbnail}
+                            title={books.volumeInfo.title}
+                            author={books.volumeInfo.authors}
                        />
                    ))}
                 </div>
