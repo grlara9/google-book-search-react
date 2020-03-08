@@ -12,6 +12,8 @@ export default function BookList(props) {
               <img src={props.image} alt="text" className="card-img-top" />
                 <p className="card-text">Title: {props.title}</p>
                 <p className="card-text">Author: {props.author}</p>
+
+                <button type="button" className="btn btn-info"><a href={props.preview}>View</a></button>
           </div>
       </div>
             )
