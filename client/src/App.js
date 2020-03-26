@@ -3,7 +3,7 @@ import { Jumbotron, Button } from 'reactstrap';
 import Search from './components/Search'
 import axios from "axios"
 import Books from './components/Books'
-
+import bookimage from './images/books.jpg'
 import './App.css';
 
 class App extends Component {
@@ -33,11 +33,20 @@ class App extends Component {
    
     this.setState({ searchField: e.target.value})
   }
-  render() {
-    return (
+  
 
-      <div className="App container">
-      <Jumbotron>
+  render() {
+    const mystyle = {
+      backgroundImage: `url(${bookimage})`,
+      
+    }
+
+    const mystyle2 = {
+      backgroundColor: '#8b5d2e'
+    }
+    return (
+      <div className="App container" style={mystyle2}>
+      <Jumbotron style={mystyle}>
         <h1 className="lead text-center font-weight-bold mb-3">Google Search Book App</h1>
           <Search book={this.searchBook} search={this.handleSearch}/>
         </Jumbotron>

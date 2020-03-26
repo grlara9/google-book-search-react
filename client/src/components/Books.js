@@ -12,7 +12,9 @@ export class Books extends Component {
 
         return (
             <React.Fragment>
+                Results: 
                 <div className="col-12 p-5 row">
+                    
                    { 
                     book.map((books) => (
                        <BookList 
