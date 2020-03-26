@@ -44,10 +44,15 @@ class App extends Component {
     const mystyle2 = {
       backgroundColor: '#8b5d2e'
     }
+
+    const mystyle3 = {
+      fontSize: '50px',
+      color: '#5d3a1a'
+    }
     return (
       <div className="App container" style={mystyle2}>
       <Jumbotron style={mystyle}>
-        <h1 className="lead text-center font-weight-bold mb-3">Google Search Book App</h1>
+        <h1 className="lead text-center font-weight-bold mb-3 " style={mystyle3}>Google Search Book App</h1>
           <Search book={this.searchBook} search={this.handleSearch}/>
         </Jumbotron>
         <Books result={this.state.books}/>

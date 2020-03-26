@@ -37,7 +37,7 @@ export class Header extends Component {
             <h1 className="display-3">Google Search Book App</h1>
             <hr className="my-2" />
             <Search searchpromise={this.searchBook} search={this.handleSearch} />
-        </Jumbotron>
+            </Jumbotron>
 
             </div>
         )
